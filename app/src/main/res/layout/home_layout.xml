@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/contentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_movie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:minWidth="50dp"
+            android:minHeight="50dp" />
+
+        <TextView
+            android:id="@+id/errorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/something_went_wrong"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/noContentView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="No Content Found"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

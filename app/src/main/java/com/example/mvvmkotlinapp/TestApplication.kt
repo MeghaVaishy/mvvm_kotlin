@@ -1,9 +1,9 @@
 package com.example.mvvmkotlinapp
 
 import androidx.multidex.MultiDexApplication
+import com.example.mvvmkotlinapp.injection.AppComponent
 
 class TestApplication : MultiDexApplication() {
-
     companion object {
         @get: Synchronized
         lateinit var mInstance: TestApplication
