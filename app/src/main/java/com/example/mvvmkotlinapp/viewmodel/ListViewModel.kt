@@ -10,12 +10,12 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
 
-class ListViewModel() : ViewModel() {
+class ListViewModel : ViewModel() {
 
     lateinit var movieRepository: MovieRepository
     private lateinit var compositeDisposable: CompositeDisposable
     fun init() {
-        movieRepository = MovieRepository()
+        movieRepository = MovieRepository.getInstance()
         compositeDisposable = CompositeDisposable()
     }
 

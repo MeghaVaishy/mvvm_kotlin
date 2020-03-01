@@ -8,6 +8,9 @@
 
         <import type="android.text.TextUtils" />
 
+        <variable
+            name="result"
+            type="com.example.mvvmkotlinapp.model.Result" />
 
     </data>
 
@@ -46,6 +49,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:textColor="@color/text_black"
+            android:text='@{result.title}'
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -60,8 +64,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:text=""
             android:visibility="gone"
+            android:text='@{result.releaseDate}'
             android:textColor="@color/text_black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
