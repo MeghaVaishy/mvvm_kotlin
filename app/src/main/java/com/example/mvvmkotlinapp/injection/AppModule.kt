@@ -65,7 +65,7 @@ class AppModule {
     @Singleton
     fun provideRetrofit(httpClient: OkHttpClient?): Retrofit {
 //        val jsonConverterFactory = JsonConverterFactory()
-        return Retrofit.Builder().baseUrl("https://github-trending-api.now.sh")
+        return Retrofit.Builder().baseUrl("http://api.themoviedb.org")
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create(providesGson())).client(httpClient)
             .build()

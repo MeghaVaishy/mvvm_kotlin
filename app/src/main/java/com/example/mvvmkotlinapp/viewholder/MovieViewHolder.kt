@@ -13,16 +13,17 @@ class MovieViewHolder(private val searchInfoItemBinding: SearchInfoItemBinding) 
     fun bind(result: Result) {
         searchInfoItemBinding.executePendingBindings()
         searchInfoItemBinding.result = result
-        loadImage(searchInfoItemBinding.image, "http://image.tmdb.org/t/p/w92/" + result.posterPath)
-
+        loadImage(
+            searchInfoItemBinding.image,
+            "http://image.tmdb.org/t/p/w92" + result.posterPath
+        )
     }
 
 
-    private fun loadImage(view: ImageView, imageUrl: String?) {
+    private fun loadImage(view: ImageView, imageUrl: String) {
         Glide.with(view.context)
             .load(imageUrl).apply(RequestOptions().circleCrop())
             .into(view)
     }
-
 }
 

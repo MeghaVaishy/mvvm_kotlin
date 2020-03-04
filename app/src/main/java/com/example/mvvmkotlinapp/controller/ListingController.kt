@@ -44,6 +44,7 @@ class ListingController : ViewModelController() {
 
             it?.results?.let { it1 -> movieList.addAll(it1) }
             setAdapter(movieList)
+            homeLayoutBinding.progressBar.visibility=View.GONE
 
         })
 
